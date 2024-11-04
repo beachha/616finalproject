@@ -1,7 +1,7 @@
 ---
 title: "BA Student Movement Data Cleaning"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-author: "XX"
+author: "Beach, Hatcher. Coats, Cameron. Sharifi, Mani"
 format: 
   html:
     toc: true
