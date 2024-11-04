@@ -1,7 +1,7 @@
 ---
 title: "BA Student Movement Data Cleaning_Submission"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-author: "XX"
+author: "Beach, Hatcher. Coats, Cameron. Sharifi,Mani"
 format: 
   html:
     toc: true
@@ -13,7 +13,96 @@ format:
     self-contained: true
     #bibliography: winerefs.bib
 ---
+```Goals
+Verify the data. If you find it is not correct or consistent, present your approach, and compare/contrast your counts to the existing counts
+Operationally define freshman, sophomore, junior, senior for the purposes of this counting exercise
+Explain why we had 84 BA majors in Spring 2023 but only 62 graduated in 2024. Is this true? If so, where did the other 22 people go?
+Develop a easier and more informative method to present this data
+Make it easy to develop and explain to internal and external audience
+Make it reproducible so that we can update it each semester
+Make it better
 
+Checkpoint 1
+
+This is your first checkpoint for Project 3.  The final project will be delivered to the client on Friday, December 8; however, your team will turn in the final project on Wednesday, November 29.  Presentations to the class will be on November 30, December 5, 7, and 14.  This checkpoint is to ensure you are making adequate progress towards your final deliverable.  This checkpoint should include, at minimum, the following items:
+
+Your problem statement:  A concise paragraph (or bullet items, or a combination) that describes the overall problem you are trying to solve.
+This project addresses the inconsistencies in Business Analytics and ISA majors at FSB. In this case, there is a drop from 84 BA majors in Spring of 2023 but only 62 graduated in 2024. The problem is finding where those 22 students went, and how these discrepancies came to life. To solve this problem, we need to define who is a freshman, sophomore, junior, and senior as there is a grey area to how these students are represented. By doing this, we can explain graduation counts more easily and the differences between Spring 2023 and 2024. Our final goal is to deliver insights into student progression, improve data reliability, and enable accessible reporting.
+
+The research questions that outline the specific questions you are going to answer with your analysis
+Research questions:
+Are current student grade levels accurate? If not, how are they classified and what would be a more accurate way to measure grade level? Credit hours, semesters enrolled, etc.
+Why did the number of BA majors decrease from Spring 2023 to 2024? Did these students change majors, graduate early, transfer, etc.?
+How can we ensure our analysis is reproducible for upcoming semesters?
+What are the most effective ways to present enrollment and graduation data to make it accessible for the client?
+
+A completed Business Value Proposition Canvas
+https://www.canva.com/design/DAGVJpL-lKI/Oz2Y_f_C9PH3SL3BPOmbwA/edit 
+
+A list of deliverables that you will provide to the client upon completion of your project
+A method of classification(freshman, sophomore, junior, senior) for students 
+An overall, cleaned data set based on our method of classification
+A complete technical report of what we accomplished
+A final presentation slide deck showcasing our major findings for the project
+
+
+A timeline for completing your project:  This should include the tasks that need to be completed, the person on your team who is responsible for overseeing the completion of the task, the date the task is due to be completed.
+Cam will do data cleaning and validation by Monday the 4th
+Hatcher will define the problem statement, research questions, BVP, deliverables, and timeline by Monday the 4th
+Mani will combine the cleaned data and written content into an RMarkdown for submission for Checkpoint 1 by Monday the 4th
+Cam, Hatcher, and Mani will collaborate on a way to classify grade levels by Friday the 9th
+All develop and finalize HTML workflow and GitHub for Checkpoint 2 submission on Sunday the 17th
+All will collaborate on the technical report and have finished before Friday the 22nd
+All will develop the final workflow deliverable after we have finished all the above, so by Friday the 22nd or Monday the 25th
+All will collaborate on the final presentation slides and have them complete before Thanksgiving break, Tuesday the 26th
+Cam, Hatcher, and Mani will then ensure the above three deliverables are ready to submit on Sunday the 1st and will be ready to present on Tuesday the 3rd
+
+
+
+Any other work projects that have been completed.  For example, you may have cleaned and merged your data.  All code and output should be included.  
+
+
+All of your work should be completed in a single reproducible document such as an RMarkdown or other notebook.  When turning in your document, you must turn in the rendered version in HTML or your team will receive a grade of zero.
+
+
+Speaker notes
+Multiple cohort terms means they might’ve dropped out and came back - take the second one
+*SD = major not specified
+Count term codes for grade status - issue is students coming in with hours
+
+
+He will  add ISA classes 
+
+
+
+
+Steps to unmerge and fill excel data 
+If you’re working with a large dataset, using VBA (Visual Basic for Applications) can automate this process efficiently. Here's a VBA script to unmerge cells in a selected range and fill each unmerged cell with the original value:
+Press Alt + F11 to open the VBA editor in Excel.
+Go to Insert > Module to create a new module.
+Paste the following code:
+vba
+Copy code
+Sub UnmergeAndFill()
+    Dim cell As Range
+    Dim mergeArea As Range
+    
+    For Each cell In Selection
+        If cell.MergeCells Then
+            Set mergeArea = cell.MergeArea
+            cell.MergeCells = False
+            mergeArea.Value = cell.Value
+        End If
+    Next cell
+    
+    MsgBox "Unmerge and fill complete."
+End Sub
+
+
+Close the VBA editor.
+Select the range you want to unmerge and fill, then press Alt + F8 to open the macro window, select UnmergeAndFill, and click Run.
+This will unmerge all merged cells in the selected range and fill each cell with the original merged value. It works well for large datasets without needing manual copying and pasting.
+```
 
 ## Package Installation and Initialization
 
