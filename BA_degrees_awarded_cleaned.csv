@@ -1,0 +1,576 @@
+"Student.ID","Term.Code","Degree.Type","Degree","Major","Student.Division.Code","Student.Department.Code","Semesters.to.Degree.Average","AW.-.Major.Count"
+"8129435","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8144902","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8144902","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",6,1
+"8149335","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8164296","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8164296","202520","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",6,1
+"8178743","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8181140","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8181140","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8181775","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8181775","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8182276","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8182483","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8182483","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8183371","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8183672","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8183672","202520","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8184225","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8184369","202510","Bachelor","B.S. in Business","Marketing","FSB","MKT",7,1
+"8185334","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8185381","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8185381","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8185825","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8186192","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8186192","202520","Bachelor","B.S. in Business","Entrepreneurship","FSB","ESP",8,1
+"8186376","202520","Bachelor","B.S. in Computer Science","Analytics","*NSD","*NSD",8,1
+"8186376","202520","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8186466","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8187393","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8187578","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8188159","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8188216","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8188376","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8188396","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8189088","202510","Bachelor","B.S. in Business","Accountancy","FSB","ACC",7,1
+"8189159","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8189686","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8189730","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8189730","202520","Bachelor","Bachelor of Arts","Spanish","CAS","SPN",8,1
+"8189864","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8190065","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8190575","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8190708","202510","Bachelor","B.S. in Business","Accountancy","FSB","ACC",7,1
+"8191039","202520","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",8,1
+"8191163","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8191163","202515","Bachelor","B.S. in Business","Finance","FSB","FIN",7,1
+"8191209","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8191401","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8191431","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8191448","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8191448","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8191595","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8191633","202510","Bachelor","B.S. in Business","Accountancy","FSB","ACC",7,1
+"8191653","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8191700","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8191700","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8191862","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8191921","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8191921","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8191938","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8192388","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8192462","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8192597","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8192653","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8192696","202520","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8192894","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8192960","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8192966","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8192966","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193320","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193405","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193409","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193507","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193533","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8193928","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8193985","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8194253","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8194253","202520","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8194395","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8194665","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8194805","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8194805","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8195115","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8195153","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8195158","202520","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8195188","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8195281","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8195689","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8195899","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8195925","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8196046","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8196844","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8196920","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8197080","202520","Bachelor","B.S. in Business","Environmental Science","CAS","IES",8,1
+"8197080","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8197493","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8197967","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8198301","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8198848","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8199244","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8199396","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8199444","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8199524","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8199970","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8200504","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8200504","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8201100","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8201100","202520","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8201347","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8201347","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8201387","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8201387","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8201493","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8201706","202520","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8201733","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8202241","202515","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8202349","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8202624","202520","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",8,1
+"8202810","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8203348","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8204022","202420","Bachelor","Bachelor of Arts","English Studies","CLAAS","LLW",6,1
+"8204070","202520","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8204130","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8204447","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8204564","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8204564","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8204994","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8205151","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8205151","202520","Bachelor","BA Emer Tech Bus & Design","Emerging Tech:Business&Design","CCA","IMS",8,1
+"8205333","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8205333","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8205394","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8205784","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8206209","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8206374","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8206527","202520","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8206527","202520","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8206589","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8206673","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8207056","202520","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8208062","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8208211","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8208211","202520","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8216970","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8217036","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8217036","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8217044","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8218436","202420","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",6,1
+"8221753","202420","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",6,1
+"8224982","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8226333","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8226483","202510","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",9,1
+"8226632","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8226632","202420","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8228733","202415","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8228925","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8228925","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8229824","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8229824","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8229869","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8229976","202420","Bachelor","Bachelor of Science","Analytics","*NSD","*NSD",8,1
+"8229976","202420","Bachelor","Bachelor of Science","Data Science and Statistics","CAS","STA",8,1
+"8230735","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8230735","202420","Bachelor","B.S. in Business","Information Systems","FSB","ISA",8,1
+"8231106","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",4,1
+"8231117","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8231449","202415","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",7,1
+"8232226","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8232533","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8233278","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8233278","202520","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8233829","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8233844","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8233854","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8235522","202420","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8235926","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8236003","202420","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8236003","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8236114","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8236405","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8236496","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8236496","202420","Bachelor","B.S. in Business","Fashion","CCA","ART",8,1
+"8236572","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8236572","202410","Bachelor","B.S. in Business","Marketing","FSB","MKT",7,1
+"8237593","202510","Bachelor","Bachelor of Science","Analytics","*NSD","*NSD",8,1
+"8237593","202510","Bachelor","Bachelor of Science","Data Science and Statistics","CAS","STA",8,1
+"8237729","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8237729","202410","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",7,1
+"8237792","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8237816","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8237816","202410","Bachelor","B.S. in Business","Marketing","FSB","MKT",7,1
+"8237939","202415","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8237988","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8238764","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8238895","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8238895","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8239036","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8239451","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8240091","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8240124","202420","Bachelor","B.S. in Software Engineering","Analytics","*NSD","*NSD",8,1
+"8240124","202420","Bachelor","B.S. in Software Engineering","Software Engineering","CEC","CSE",8,1
+"8241122","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8241959","202420","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8242001","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8242136","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8242136","202420","Bachelor","B.S. in Business","Fashion","CCA","ART",8,1
+"8242848","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8242848","202420","Bachelor","B.S. in Business","Sustainability","CAS","IES",8,1
+"8242896","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8242896","202420","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8243232","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8243561","202420","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8243561","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8243761","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8245502","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8246329","202420","Bachelor","B.S. in Business","Information Systems","FSB","ISA",8,1
+"8246520","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",6,1
+"8246894","202415","Bachelor","B.S. in Business","Finance","FSB","FIN",7,1
+"8246913","202430","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8247640","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8248087","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8248246","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8248382","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8248778","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8249032","202410","Bachelor","B.S. in Business","Accountancy","FSB","ACC",7,1
+"8249032","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",7,1
+"8249700","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8250686","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8250686","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8251048","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8251048","202420","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8251072","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8251072","202420","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",8,1
+"8251114","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8251501","202420","Bachelor","B.S. in Business","Information&Cybersec Mgt","FSB","ISA",8,1
+"8260957","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8260957","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8261450","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8262661","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8263482","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8264086","202520","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8264086","202520","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8264603","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",6,1
+"8264603","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",6,1
+"8265510","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8265510","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8266656","202320","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8266656","202320","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8268360","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8273273","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8274007","202320","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8274007","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8274526","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8275768","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8275990","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8276788","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8276788","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8276875","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8276875","202320","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8276925","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8277031","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",10,1
+"8277031","202420","Bachelor","B.S. in Business","Finance","FSB","FIN",10,1
+"8277355","202410","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8277469","202410","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8278735","202310","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",7,1
+"8278735","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",7,1
+"8278739","202320","Bachelor","Bachelor of Science","Analytics","*NSD","*NSD",8,1
+"8278739","202320","Bachelor","Bachelor of Science","Quantitative Economics","CAS","*NSD",8,1
+"8279077","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8279077","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8279285","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8279703","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8279703","202320","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8280063","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8280174","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8280433","202320","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8280433","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8280700","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8281275","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8281275","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8281767","202420","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",10,1
+"8281982","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8282747","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8282974","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8283170","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8283359","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8283359","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8283387","202320","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8283387","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8284065","202320","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8284203","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8284510","202320","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8284510","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8284604","202410","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",9,1
+"8284681","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8285262","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",6,1
+"8285262","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",6,1
+"8286290","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8286290","202320","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8286362","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8286386","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8286386","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8286870","202320","Bachelor","B.S. in Business","Information Systems","FSB","ISA",8,1
+"8287137","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8287137","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8287192","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8287397","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8287473","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8287518","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8287518","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8287549","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8287549","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8288226","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8288383","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8288701","202320","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8288701","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8289645","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8289645","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8289763","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8289855","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8290249","202330","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",8,1
+"8290249","202330","Bachelor","Bachelor of Arts","Psychology","CAS","PSY",8,1
+"8290276","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8290276","202320","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8290339","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8290855","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8291190","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8291384","202310","Bachelor","B.S. in Business","Accountancy","FSB","ACC",7,1
+"8291384","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",7,1
+"8291591","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",6,1
+"8292332","202320","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8292332","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8292442","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8292446","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8293553","202320","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8293553","202320","Bachelor","B.S. in Business","Information Systems","FSB","ISA",8,1
+"8293617","202320","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",8,1
+"8293617","202320","Bachelor","Bachelor of Arts","Strategic Communication","CAS","MJF",8,1
+"8293789","202320","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8293990","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8294257","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8294329","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8294533","202320","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8294533","202320","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8294677","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",6,1
+"8294785","202320","Bachelor","B.S. in Computer Science","Analytics","*NSD","*NSD",8,1
+"8294785","202320","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8295097","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8295097","202320","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8295572","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8295624","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",7,1
+"8296019","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8296091","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8304284","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8304959","202520","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8305176","202420","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",10,1
+"8305468","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",6,1
+"8305795","202420","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8305795","202420","Bachelor","Bachelor of Arts","Political Science","CAS","POL",8,1
+"8309047","202220","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8309126","202310","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",9,1
+"8309126","202310","Bachelor","B.S. in Business","Marketing","FSB","MKT",9,1
+"8311146","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8311871","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8313151","202310","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",9,1
+"8313151","202310","Bachelor","B.S. in Business","Marketing","FSB","MKT",9,1
+"8313455","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8314453","202220","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8314453","202220","Bachelor","B.S. in Business","Human Capital Mgmt& Leadership","FSB","MGT",8,1
+"8314754","202220","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8314754","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8315620","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8317414","202310","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",9,1
+"8317414","202310","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",9,1
+"8317791","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8318030","202220","Bachelor","B.S. in Computer Science","Analytics","*NSD","*NSD",8,1
+"8318030","202220","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8318744","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8318744","202220","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8319115","202220","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8319933","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8320803","202220","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8320803","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8321660","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8321894","202220","Bachelor","BA Interactive Media Studies","Interactive Media Studies","CCA","IMS",8,1
+"8323387","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8323830","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8324656","202220","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8325028","202220","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8325151","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",10,1
+"8325515","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8326128","202220","Bachelor","Bachelor of Arts","Mathematics","CAS","MTH",8,1
+"8326382","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8326382","202220","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8327017","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8327627","202220","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8328843","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8328875","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8329214","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8329631","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8330104","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8330667","202220","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8330667","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8332131","202220","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8332243","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8332399","202210","Bachelor","B.S. in Business","Marketing","FSB","MKT",7,1
+"8332566","202220","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8332566","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8332809","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8332809","202220","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8332899","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8332921","202310","Bachelor","B.S. in Business","Accountancy","FSB","ACC",9,1
+"8332921","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8333381","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8333453","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8333646","202220","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8334557","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8335143","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",6,1
+"8335143","202120","Bachelor","Bachelor of Arts","German","CAS","GRAMEL",6,1
+"8336578","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8338269","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8338485","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8338893","202220","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8338893","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8339022","202320","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",10,1
+"8339022","202320","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",10,1
+"8339022","202320","Bachelor","BA Interactive Media Studies","Interactive Media Studies","CCA","IMS",10,1
+"8339335","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8339550","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8339919","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8340310","202220","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",8,1
+"8340310","202220","Bachelor","Bachelor of Arts","Strategic Communication","CAS","MJF",8,1
+"8340355","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",6,1
+"8340511","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8340526","202220","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8340526","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8342493","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8350002","202115","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",7,1
+"8350002","202115","Bachelor","Bachelor of Arts","Strategic Communication","CAS","MJF",7,1
+"8350888","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8351630","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8351630","202220","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8354482","202120","Bachelor","B.S. in Software Engineering","Analytics","*NSD","*NSD",8,1
+"8354482","202120","Bachelor","B.S. in Software Engineering","Software Engineering","CEC","CSE",8,1
+"8354519","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8355890","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8357001","202230","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",10,1
+"8358602","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8358602","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8359278","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8359870","202020","Bachelor","B.S. in Business","Accountancy","FSB","ACC",6,1
+"8359870","202020","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",6,1
+"8364375","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8365108","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8365422","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8365711","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8366174","202120","Bachelor","Bachelor of Science","Data Science and Statistics","CAS","STA",8,1
+"8366385","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8366385","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8366918","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8366918","202120","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8367035","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8367545","202120","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8367894","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8367894","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8367944","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8367955","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8368057","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8368057","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8368109","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8368109","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8368121","202110","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",7,1
+"8368719","202110","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",7,1
+"8368719","202110","Bachelor","B.S. in Business","Finance","FSB","FIN",7,1
+"8369044","202310","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",11,1
+"8369067","202130","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8369564","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8369564","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8370335","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8370335","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8370460","202120","Bachelor","Bachelor of Arts","Global & Intercultural Studies","CAS","GIC",8,1
+"8370460","202120","Bachelor","Bachelor of Arts","Strategic Communication","CAS","MJF",8,1
+"8371569","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8371719","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8371741","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8372215","202120","Bachelor","B.S. in Sport Lead & Mgmt","Analytics","*NSD","*NSD",8,1
+"8372215","202120","Bachelor","B.S. in Sport Lead & Mgmt","Sport Leadership & Management","EHS","SLM",8,1
+"8372318","202120","Bachelor","B.S. in Computer Science","Analytics","*NSD","*NSD",8,1
+"8372318","202120","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8372669","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8372669","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8372995","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8372995","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8373418","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8373628","202120","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8373905","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8374059","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8375640","202220","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8375640","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8376010","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8376089","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8377320","202120","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8377418","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8377418","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8377632","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8377632","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8377653","202120","Bachelor","B.S. in Business","Business Analytics","FSB","ISA",8,1
+"8377653","202120","Bachelor","B.S. in Business","Fashion","CCA","ART",8,1
+"8378332","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8379553","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8379553","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8379931","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8380034","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8380912","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8380912","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8381137","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8381137","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8381513","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8381924","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8382026","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8382476","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8382573","202120","Bachelor","BA in History of Art & Arch","Art & Architecture History","CCA","ART",8,1
+"8382573","202120","Bachelor","BA in History of Art & Arch","Fashion","CCA","ART",8,1
+"8382893","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8383258","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8383258","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8383490","202120","Bachelor","B.S. in Computer Science","Analytics","*NSD","*NSD",8,1
+"8383490","202120","Bachelor","B.S. in Computer Science","Computer Science","CEC","CSE",8,1
+"8383906","202210","Bachelor","B.S. in Business","Accountancy","FSB","ACC",9,1
+"8383906","202210","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",9,1
+"8384345","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8384407","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8384407","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8384659","202210","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8385193","202120","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",8,1
+"8385193","202120","Bachelor","Bachelor of Arts","Media and Culture","CAS","MJF",8,1
+"8385483","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8385730","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8385730","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8386138","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8386138","202120","Bachelor","B.S. in Business","Premedical Studies","CAS","*NSD",8,1
+"8386377","202215","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",9,1
+"8388086","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8388254","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8389082","202120","Bachelor","B.S. in Business","Finance","FSB","FIN",8,1
+"8389082","202120","Bachelor","B.S. in Business","Supply Chain & Operations Mgmt","FSB","MGT",8,1
+"8389477","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8397628","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398101","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398101","202120","Bachelor","B.S. in Business","Marketing","FSB","MKT",8,1
+"8398122","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8398122","202120","Bachelor","B.S. in Business","Business Economics","FSB","ECO",8,1
+"8398216","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398224","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398240","202110","Bachelor","B.S. in Kinesiology & Health","Analytics","*NSD","*NSD",7,1
+"8398240","202110","Bachelor","B.S. in Kinesiology & Health","Sport Leadership & Management","EHS","SLM",7,1
+"8398291","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8398291","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398303","202220","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398361","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8398381","202120","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8398381","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8401257","202120","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8401257","202120","Bachelor","B.S. in Business","Information Systems &Analytics","FSB","ISA",8,1
+"8429284","202020","Bachelor","Bachelor of Arts","Analytics","*NSD","*NSD",6,1
+"8429284","202020","Bachelor","Bachelor of Arts","Strategic Communication","CAS","MJF",6,1
+"8458965","201920","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8458965","201920","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8476995","201920","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8476995","201920","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8521298","201820","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8521298","201820","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"8521862","201820","Bachelor","B.S. in Business","Accountancy","FSB","ACC",8,1
+"8521862","201820","Bachelor","B.S. in Business","Analytics","*NSD","*NSD",8,1
+"Rows 1 - 574 (All Rows)","201820","Bachelor","B.S. in Business",NA,NA,NA,NA,NA
