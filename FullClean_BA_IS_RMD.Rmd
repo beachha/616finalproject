@@ -1,0 +1,514 @@
+---
+title: "BA Student Movement Data Cleaning"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: "Cameron Coats, Hatcher Beach, Mani Sharifi"
+format: 
+  html:
+    toc: true
+    toc-location: left
+    toc-expand: true
+    code-tools: true 
+    code-fold: true
+    code-overflow: scroll
+    self-contained: true
+    #bibliography: winerefs.bib
+---
+## Link to GitHub
+[Link to our GitHub](https://github.com/beachha/616finalproject)
+
+## Checkpoint 2:
+This checkpoint is to ensure you are making adequate progress towards your final deliverable.  I will give you feedback by the end of day on November 27 on anything your turn in at this stage.  This checkpoint should include, at minimum, the following items:
+
+### problem statement:  
+This project addresses inconsistencies in tracking Business Analytics and ISA majors at FSB, with a drop from 84 majors in Spring 2023 to only 62 graduates in 2024. The goal is to develop a structured approach to classify students by academic standing (freshman, sophomore, junior, and senior) to identify where discrepancies are. By standardizing student classification, we can clarify graduation counts, improve data reliability, and provide accessible insights into student progression from admission to graduation.
+
+### Research questions:
+●	Are current student grade levels accurate? If not, how are they classified and what would be a more accurate way to measure grade level? Credit hours, semesters enrolled, etc.
+●	Why did the number of BA majors decrease from Spring 2023 to 2024? Did these students change majors, graduate early, transfer, etc.?
+●	How can we ensure our analysis is reproducible for upcoming semesters?
+●	What are the most effective ways to present enrollment and graduation data to make it accessible for the client?
+
+### Business Value 
+![Business Value](./ISA 616 Final Project BVP.png)
+
+### List of deliverables: 
+●	A reproducible code base to track and count student progression in declared majors within the ISA department
+●	A standardized classification method for identifying academic standing (freshman, sophomore, junior, and senior)
+●	A cleaned, comprehensive dataset aligned with the classification method	A final presentation deck highlighting key project insights and findings. Final dataset will be a student table with every observation representing a single student
+●	A detailed technical report documenting project methodologies and outcomes
+●	A final presentation deck highlighting key project insights and findings
+
+### Timeline for completing the project:
+●	Cam will do data cleaning and validation by Monday the 4th
+●	Hatcher will define the problem statement, research questions, BVP, deliverables, and timeline by Monday the 4th
+●	Mani will combine the cleaned data and written content into an RMarkdown for submission for Checkpoint 1 by Monday the 4th
+●	Finish cleaning and combining the data by Friday the 15th
+●	All develop and finalize HTML workflow and GitHub for Checkpoint 2 submission on Sunday the 17th
+●	All will work to piece together a final student data
+●	All will collaborate on the technical report and have it finished before Friday the 22nd
+●	All will develop the final workflow deliverable after we have finished all the above, so by Friday the 22nd or Monday the 25th
+●	All will collaborate on the final presentation slides and have them complete before Thanksgiving break, Tuesday the 26th
+●	Cam, Hatcher, and Mani will then ensure the above three deliverables are ready to submit on Sunday the 1st and will be ready to present on Tuesday the 3rd
+●	HTML of workflow with everything above plus cleaned, merged data and analysis. Update.
+●	Github AND a zipped folder with fully reproducible analysis. Update.
+●	Any other work products that have been completed including rough drafts for your final report and slides.
+
+### Final Dataset Design:
+Student Table Components
+Rows : Distinct Students
+Columns: 
+●	Index: Unique Student ID 
+●	Starting Semester: MIN Term Code - First Semester 
+●	Semester Count: Count of terms codes (ending in 10 or 20– Spring–Fall)
+●	Total Credits (counts)-  would be MAX(Count) for Each Student ID
+●	Advanced Classes: Flags for specific classes  - The are classes that are required of each major and would indicate being further along in the major pipeline
+○	For BA (ISA 401, ISA 414, ISA 491)
+○	For IS (ISA 406, ISA 495)
+●	Major Change: Flag if major is different than in starting term ( or 2 columns One for major in max one for major in MIN
+●	Double Major: Dummy variable to indicate student with additional majors
+●	GPA: cumulative from max term code
+●	Graduated(Target): (Degrees Awarded Column) (0,1) label of classification
+
+
+## Package Installation and Initialization
+
+In this portion we use `pacman` to install the necessary packages and clear the global environment.
+
+```{r setup,message=FALSE,warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=FALSE,warning=FALSE, out.width = "100%")
+#package initialization
+rm(list = ls()) # clear global environment
+graphics.off() # close all graphics
+if(require(pacman)==FALSE) install.packages("pacman")
+pacman::p_load(DataExplorer, # For explorer and cleaning data by visualizing missing values.
+               httr, # For downloading the data from the UCI
+               tidyverse, # For data manipulation
+               corrplot, # for heatmaps
+               DataExplorer, #for exploring data
+               skimr, # for nice summary of data
+               readxl, #to read Excel files
+               networkD3 # to create a Sankey Plot
+               ) # For creating dummy variables of categorical variables automatically.)
+```
+
+## Load data
+
+### Loading BA Students
+
+This is the list of students under consideration.  Here is the logic for this data pull:
+
+
+```{r}
+BA_Students=read_excel("BA Major Students.xlsx")
+head(BA_Students)
+paste("The number of rows in the data is ",nrow(BA_Students))
+paste("The number of unique students is ",length(unique(BA_Students$`Student ID`)))
+write.csv(BA_Students,"data-clean/BA_Students_cleaned.csv")
+
+```
+### Loading IS Students
+
+This is the list of students under consideration.  Here is the logic for this data pull:
+
+
+```{r}
+IS_Students=read_excel("IS Major Students.xlsx")
+head(IS_Students)
+paste("The number of rows in the data is ",nrow(IS_Students))
+paste("The number of unique students is ",length(unique(IS_Students$`Student ID`)))
+write.csv(IS_Students,"data-clean/IS_Students_cleaned.csv")
+
+```
+
+### Loading BA Majors
+
+Below I read in the data and fill in the missing values with the correct values.  The level of analysis is Student ID X Term Code.  Each student has a row for each term they have been enrolled.  Some students have one row, others have eight.
+
+Finally, I make sure that each student has the Cohort Term that is equal to the earliest date on record.
+
+```{r}
+# Read data
+BA_Majors=read_excel("./BA Major Students - Majors.xlsx")
+# Fill in the blank cells created from the format of the data
+BA_Majors=BA_Majors %>% 
+  fill(c(`Student ID`:`Term Code`),.direction="down")
+#Create a separate column for each major.  Unit of analysis here is student by Term Code
+BA_Majors=BA_Majors %>% 
+  group_by(`Student ID`,`Term Code`) %>% 
+  mutate(Major_Number=paste("Major",row_number())) %>% 
+  pivot_wider(names_from=Major_Number, values_from=`BA Major`) 
+
+# Set the Cohort Term to the smallest observed value for a given student. 
+BA_Majors=BA_Majors %>% 
+  group_by(`Student ID`) %>% 
+  mutate(`Cohort Term`=min(`Cohort Term`)) 
+
+head(BA_Majors)
+paste("The number of rows is ",nrow(BA_Majors))
+paste("The number of unique students is ",length(unique((BA_Majors$`Student ID`))))
+
+write.csv(BA_Majors,"data-clean/BA_Majors_cleaned.csv")
+```
+### Loading IS Majors
+
+Below I read in the data and fill in the missing values with the correct values.  The level of analysis is Student ID X Term Code.  Each student has a row for each term they have been enrolled.  Some students have one row, others have eight.
+
+Finally, I make sure that each student has the Cohort Term that is equal to the earliest date on record.
+
+```{r}
+# Read data
+IS_Majors=read_excel("./IS Major Students - Majors.xlsx")
+# Fill in the blank cells created from the format of the data
+IS_Majors=IS_Majors %>% 
+  fill(c(`Student ID`:`Term Code`),.direction="down")
+#Create a separate column for each major.  Unit of analysis here is student by Term Code
+IS_Majors=IS_Majors %>% 
+  group_by(`Student ID`,`Term Code`) %>% 
+  mutate(Major_Number=paste("Major",row_number())) %>% 
+  pivot_wider(names_from=Major_Number, values_from=`Major`) 
+
+# Set the Cohort Term to the smallest observed value for a given student. 
+IS_Majors=IS_Majors %>% 
+  group_by(`Student ID`) %>% 
+  mutate(`Cohort Term`=min(`Cohort Term`)) 
+
+head(IS_Majors)
+paste("The number of rows is ",nrow(IS_Majors))
+paste("The number of unique students is ",length(unique((IS_Majors$`Student ID`))))
+
+write.csv(IS_Majors,"data-clean/IS_Majors_cleaned.csv")
+```
+### Loading BA Grades
+
+Loaded student grades, filled in missing cells according to the data structure.  There are only 694 students.  This is possibly because the freshmen do not yet have grades. I checked this, and there are 140 freshmen who have no grades.  694+140=834.  We have 823 unique students in the file.  It is possible that 834+823=11 students in cohort 202410 have grades, possibly due to dual enrollment or summer classes prior to the Fall semester.
+
+```{r}
+# Read data
+BA_Grades=read_excel("./BA Major Students - Grades -updated.xlsx")
+
+# Fill in the blank cells created from the format of the data
+BA_Grades = BA_Grades %>% 
+  fill(c(`Student ID`),.direction="down")
+
+head(BA_Grades)
+tail(BA_Grades)
+paste("The number of unique students is ",length(unique(BA_Grades$`Student ID`)))
+num_fresh=BA_Majors %>%
+  filter(`Cohort Term`=="202410")%>%
+  nrow()
+paste("The number of students starting in term 201410 is ", num_fresh)
+
+write.csv(BA_Grades,"data-clean/BAGrades_cleaned.csv")
+```
+### Loading IS Grades
+
+Loaded student grades, filled in missing cells according to the data structure.  There are only 694 students.  This is possibly because the freshmen do not yet have grades. I checked this, and there are 140 freshmen who have no grades.  694+140=834.  We have 823 unique students in the file.  It is possible that 834+823=11 students in cohort 202410 have grades, possibly due to dual enrollment or summer classes prior to the Fall semester.
+
+```{r}
+# Read data
+IS_Grades=read_excel("./IS Major Students - Grades -updated.xlsx")
+
+# Fill in the blank cells created from the format of the data
+IS_Grades = IS_Grades %>% 
+  fill(c(`Student ID`),.direction="down")
+
+head(IS_Grades)
+tail(IS_Grades)
+paste("The number of unique students is ",length(unique(IS_Grades$`Student ID`)))
+num_fresh=IS_Majors %>% ##BA
+  filter(`Cohort Term`=="202410")%>%
+  nrow()
+paste("The number of students starting in term 201410 is ", num_fresh)
+
+write.csv(IS_Grades,"data-clean/ISGrades_cleaned.csv")
+```
+### Loading BA Attributes
+
+Below I load in the Attributes.  There are 134 students with missing cumulative GPA.  
+
+The level of analysis for the final data frame is Student ID X Term Code.
+
+```{r}
+# Read data
+Attributes=read_excel("./BA Major Students - Attributes and GPA.xlsx")
+# Fill in the blank cells created from the format of the data
+Attributes = Attributes %>% 
+  fill(c(`Student ID`:`First Generation Indicator`),.direction="down")
+
+paste("The number of unique students is ",length(unique(Attributes$`Student ID`)))
+
+head(Attributes)
+test=Attributes %>% 
+  filter(is.na('Term UG Crs GPA'))
+
+paste("The number of students with no grades ",length(unique(test$`Student ID`)))
+write.csv(Attributes,"data-clean/BA_Attributes_cleaned.csv")
+```
+
+### Loading IS Attributes
+
+Below I load in the Attributes.  There are 134 students with missing cumulative GPA.  
+
+The level of analysis for the final data frame is Student ID X Term Code.
+
+```{r}
+# Read data
+IS_Attributes=read_excel("./IS Major Students - Attributes and GPA.xlsx")
+# Fill in the blank cells created from the format of the data
+IS_Attributes = IS_Attributes %>% 
+  fill(c(`Student ID`:`First Generation Indicator`),.direction="down")
+
+paste("The number of unique students is ",length(unique(IS_Attributes$`Student ID`)))
+
+head(IS_Attributes)
+test=IS_Attributes %>% 
+  filter(is.na('Term UG Crs GPA'))
+
+paste("The number of students with no grades ",length(unique(test$`Student ID`)))
+write.csv(IS_Attributes,"data-clean/IS_Attributes_cleaned.csv")
+```
+
+```{r}
+# Install openxlsx if it's not already installed
+if (!requireNamespace("openxlsx", quietly = TRUE)) {
+  install.packages("openxlsx")
+}
+if (!requireNamespace("openxlsx", quietly = TRUE)) install.packages("openxlsx")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+if (!requireNamespace("tidyr", quietly = TRUE)) install.packages("tidyr")
+# Load necessary packages
+library(openxlsx)
+library(dplyr)
+library(tidyr)
+```
+```{r}
+# Load the Excel file
+file_path <- "BA Major Students - Credit Hours.xlsx"
+data <- read.xlsx(file_path, sheet = 1)
+head(data)
+```
+```{r}
+# Fill down the merged cells in the first column
+data <- data %>%
+  tidyr::fill(names(data)[1], .direction = "down")  # Fill down the first column explicitly
+head(data)
+```
+```{r}
+# Optionally, save the cleaned data as a new CSV file
+write.csv(data, "data-clean/BA_Credits_Cleaned.csv", row.names = FALSE)
+```
+
+
+```{r}
+# Load the Excel file
+file_path <- "IS Major Students - Credit Hours.xlsx"
+data <- read.xlsx(file_path, sheet = 1)
+head(data)
+```
+```{r}
+# Fill down the merged cells in the first column
+data <- data %>%
+  tidyr::fill(names(data)[1], .direction = "down")  # Fill down the first column explicitly
+head(data)
+```
+
+```{r}
+# Optionally, save the cleaned data as a new CSV file
+write.csv(data, "data-clean/IS_Credits_Cleaned.csv", row.names = FALSE)
+```
+
+
+```{r}
+## Clean Degrees File
+# Load the Excel file
+file_path <- "BA Major Students - Degrees Awarded.xlsx"
+data <- read.xlsx(file_path, sheet = 1)
+#head(data)
+```
+```{r}
+# Fill down the merged cells in the first four columns
+data <- data %>%
+  tidyr::fill(names(data)[1:4], .direction = "down")  # Fill down the first four columns
+head(data)
+```
+
+```{r}
+# Optionally, save the cleaned data as a new CSV file
+write.csv(data, "data-clean/BA_degrees_awarded_cleaned.csv", row.names = FALSE)
+```
+
+```{r}
+## IS
+
+## Clean Degrees File
+# Load the Excel file
+file_path <- "IS Major Students - Degrees Awarded.xlsx"
+data <- read.xlsx(file_path, sheet = 1)
+head(data)
+```
+```{r}
+# Fill down the merged cells in the first four columns
+data <- data %>%
+  tidyr::fill(names(data)[1:4], .direction = "down")  # Fill down the first four columns
+#head(data)
+```
+
+```{r}
+# Optionally, save the cleaned data as a new CSV file
+write.csv(data, "data-clean/IS_degrees_awarded_cleaned.csv", row.names = FALSE)
+```
+
+## Merging IS and BA files
+
+### Merging BA_Majors and IS_Majors
+```{r}
+library(dplyr)
+
+# Read CSV files
+BA <- read.csv('data-clean/BA_Majors_cleaned.csv')
+IS <- read.csv('data-clean/IS_Majors_cleaned.csv')
+
+# Drop the first column from BA and IS (regardless of its name)
+BA <- BA %>% select(-1)  # Drop the first column
+IS <- IS %>% select(-1)  # Drop the first column
+
+# Drop 'Major 6' from BA if it exists
+if ('Major 6' %in% names(BA)) {
+  BA <- BA %>% select(-`Major 6`)
+}
+
+# Concatenate BA and IS
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Majors.csv', row.names = FALSE)
+```
+
+### Merging BA_Attributes_cleaned and IS_Attributes_cleaned
+```{r}
+# Read CSV files
+BA <- read.csv('data-clean/BA_Attributes_cleaned.csv')
+IS <- read.csv('data-clean/IS_Attributes_cleaned.csv')
+
+# Drop the first column from BA and IS (regardless of its name)
+BA <- BA %>% select(-1)  # Drop the first column
+IS <- IS %>% select(-1)  # Drop the first column
+
+# Concatenate BA and IS
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Attributes.csv', row.names = FALSE)
+```
+
+### Merging BA_Students_cleaned and IS_Students_cleaned
+```{r}
+# Read CSV files
+BA <- read.csv('data-clean/BA_Students_cleaned.csv')
+IS <- read.csv('data-clean/IS_Students_cleaned.csv')
+
+# Drop the first column from BA and IS (regardless of its name)
+BA <- BA %>% select(-1)  # Drop the first column
+IS <- IS %>% select(-1)  # Drop the first column
+
+# Concatenate BA and IS
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Students.csv', row.names = FALSE)
+```
+
+### Merging BA_Gradess_cleaned and IS_Grades_cleaned
+```{r}
+# Read CSV files
+BA <- read.csv('data-clean/BAGrades_cleaned.csv')
+IS <- read.csv('data-clean/ISGrades_cleaned.csv')
+
+# Drop the first column from BA and IS (regardless of its name)
+BA <- BA %>% select(-1)  # Drop the first column
+IS <- IS %>% select(-1)  # Drop the first column
+
+# Concatenate BA and IS
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Grades.csv', row.names = FALSE)
+```
+
+### Merging 'BA Major Students - Credit Hours.csv' and 'IS Major Students - Credit Hours.csv'
+#### Checking the structure of the 'Student ID' in BA and IS files:
+```{r}
+library(dplyr)
+
+# Read CSV files
+BA <- read.csv('data-clean/BA_Credits_Cleaned.csv')
+IS <- read.csv('data-clean/IS_Credits_Cleaned.csv')
+
+head(BA)
+head(IS)
+
+# Check the structure of the data to confirm column types
+str(BA)
+str(IS)
+
+# Check column names
+colnames(BA)
+colnames(IS)
+```
+#### Changing the type of 'Student ID' in both files
+As we can see, the 'Student ID' in BA is integer and in IS is character. So, we change the type of the 'Student ID' in IS to integer using the following code:
+
+```{r}
+IS$`Student.ID` <- as.integer(IS$`Student.ID`)
+
+# If any 'Student ID' is NA (i.e., non-numeric), set it to NA
+IS$`Student ID`[is.na(IS$`Student.ID`)] <- NA
+```
+
+#### Merging files
+
+Now we can merge BA and IS using the following code:
+```{r}
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Major_Students_Credit_Hours.csv', row.names = FALSE)
+```
+
+### Merging 'BA Major Students - Degrees Awarded.csv' and 'IS Major Students - Degrees Awarded.csv'
+```{r}
+library(dplyr)
+
+# Read CSV files
+BA <- read.csv('data-clean/BA_degrees_awarded_cleaned.csv')
+IS <- read.csv('data-clean/IS_degrees_awarded_cleaned.csv')
+
+BS_IS <- bind_rows(BA, IS)
+
+# Display the records after removing duplicates
+unique_records <- BS_IS[!duplicated(BS_IS), ]
+print(unique_records)
+
+# Write the result to a CSV file
+write.csv(unique_records, 'data-merged/BS_IS_Major_Students_Degrees_Awarded.csv', row.names = FALSE)
+```
