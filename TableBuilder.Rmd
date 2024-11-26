@@ -1,0 +1,259 @@
+---
+title: "TableBuilder"
+author: "Cam Coats"
+date: "2024-11-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#chooseCRANmirror(graphics = FALSE)
+#install.packages("dplyr")
+```
+
+```{r}
+#library(dplyr)
+
+# Define file paths (update these with your actual file paths)
+student_base <- "BS_IS_Students.csv"
+credits <- "BS_IS_Major_Students_Credit_Hours.csv"
+#degrees <- "BS_IS_Major_student_Degrees_Awarded.csv"
+# Load the CSV files
+data1 <- read.csv(student_base, header = TRUE)
+data2 <- read.csv(credits, header = TRUE)
+#data3 <- read.csv(degrees, header = TRUE)
+degrees <- read.csv("BS_IS_Major_Students_Degrees_Awarded.csv", header = TRUE)
+majors <- read.csv("BS_IS_Majors.csv", header = TRUE)
+attributes <- read.csv("BS_IS_Attributes.csv", header = TRUE)
+grades <- read.csv("BS_IS_Grades.csv", header = TRUE)
+```
+
+```{r}
+if (!require("dplyr")) install.packages("dplyr", repos = "https://cloud.r-project.org")
+library(dplyr)
+## add credits
+# Find the maximum credit hours for each student ID in data2
+#total_credits <- data2 %>%
+ # group_by(Student.ID) %>%
+#  summarise(maxCredits = max(Cum.UG.Overall.Earned.CrHr..MU.and.Non.MU.
+#, na.rm = TRUE))
+
+# Compute max credits and replace -Inf with 0
+# Compute max credits and handle cases where all values are NA
+total_credits <- data2 %>%
+  group_by(Student.ID) %>%
+  summarise(maxCredits = if (all(is.na(Cum.UG.Overall.Earned.CrHr..MU.and.Non.MU.))) {
+    0
+  } else {
+    max(Cum.UG.Overall.Earned.CrHr..MU.and.Non.MU., na.rm = TRUE)
+  })
+# Merge max credits into data1 by StudentID
+data_combined <- merge(data1, total_credits, by = "Student.ID", all.x = TRUE)
+
+# Save the combined data to a new CSV file
+#output_file <- "Student_Table.csv"
+#write.csv(data_combined, file = output_file, row.names = FALSE)
+```
+
+
+```{r}
+# add degrees dummy for people who obtained a degree
+data_combined <- data_combined %>%
+  mutate(DegreeObtained = ifelse(Student.ID %in% degrees$Student.ID, 1, 0))
+```
+```{r}
+# Filter for the max Term.Code per Student.ID
+latest_major <- majors %>%
+  group_by(Student.ID) %>%
+  filter(Term.Code == max(Term.Code)) %>%
+  mutate(priority = ifelse(Major.1 %in% c("IS Major", "BA Major"), 1, 0)) %>%
+  arrange(Student.ID, desc(priority)) %>%
+  slice(1) %>%
+  ungroup()
+```
+
+```{r}
+# Merge the latest major into the student table
+data_combined <- merge(data_combined, latest_major %>% select(Student.ID, Major.1), by = "Student.ID", all.x = TRUE)
+
+# Rename the column for clarity
+colnames(data_combined)[ncol(data_combined)] <- "Major"
+```
+```{r}
+# Save the updated student table to a CSV
+#write.csv(data_combined, "Student_Table.csv", row.names = FALSE)
+```
+
+```{r}
+# Extract StartingTerm (Cohort.Term) - exclude missing values first
+starting_term <- majors %>%
+  filter(!is.na(Cohort.Term)) %>%  # Exclude rows with NA in Cohort.Term
+  group_by(Student.ID) %>%
+  summarise(StartingTerm = first(Cohort.Term))
+
+# Extract Most Recent Term (MAX of Term.Code)
+recent_term <- majors %>%
+  group_by(Student.ID) %>%
+  summarise(MostRecentTerm = max(Term.Code, na.rm = TRUE))
+
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))  # Convert to character
+
+starting_term <- starting_term %>%
+  mutate(Student.ID = as.character(Student.ID))  # Convert to character
+
+recent_term <- recent_term %>%
+  mutate(Student.ID = as.character(Student.ID))  # Convert to character
+# Merge both into the student table
+data_combined <- data_combined %>%
+  left_join(starting_term, by = "Student.ID") %>%
+  left_join(recent_term, by = "Student.ID")
+```
+
+```{r}
+# Step 1: Find GPA based on max Term.Code for each student
+gpa_data <- attributes %>%
+  group_by(Student.ID) %>%
+  filter(Term.Code == max(Term.Code, na.rm = TRUE)) %>%  # Keep rows with max Term.Code
+  select(Student.ID, Cum.UG.Crs.GPA) %>%  # Select relevant columns
+  distinct(Student.ID, .keep_all = TRUE)  # Ensure one row per student in case of ties
+
+# Step 2: Ensure Student.ID types are consistent
+gpa_data <- gpa_data %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+# Step 3: Merge GPA data into data_combined
+data_combined <- data_combined %>%
+  left_join(gpa_data, by = "Student.ID")
+```
+```{r}
+# Step 4: Replace NA GPAs with 0 and create FirstSemester dummy column
+data_combined <- data_combined %>%
+  mutate(
+    Cum.UG.Crs.GPA = ifelse(is.na(Cum.UG.Crs.GPA), 0, Cum.UG.Crs.GPA),  # Replace NA GPA with 0
+    FirstSemester = ifelse(Cum.UG.Crs.GPA == 0, 1, 0)  # Create dummy variable: 1 = no GPA, 0 = has GPA
+  )
+```
+```{r}
+## Advanced course Dummy
+# Step 1: Filter for advanced classes with valid credit
+advanced_courses <- grades %>%
+  filter(
+    Course %in% c("ISA401", "ISA414", "ISA491", "ISA406", "ISA495") &
+    (Earned.Academic.Credit == "Y" | is.na(Earned.Academic.Credit))
+  )
+
+# Step 2: Count the number of advanced classes per student
+advanced_classes_count <- advanced_courses %>%
+  group_by(Student.ID) %>%
+  summarise(AdvancedClassCount = n()) %>%
+  mutate(AdvancedClasses = ifelse(AdvancedClassCount >= 2, 1, 0))  # Dummy variable: 1 if at least 2 classes, else 0
+
+# Step 3: Ensure Student.ID types are consistent
+advanced_classes_count <- advanced_classes_count %>%
+  mutate(Student.ID = as.character(Student.ID))
+```
+```{r}
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+# Step 4: Merge the AdvancedClasses dummy into the main table
+data_combined <- data_combined %>%
+  left_join(advanced_classes_count %>% select(Student.ID, AdvancedClasses), by = "Student.ID") %>%
+  mutate(AdvancedClasses = ifelse(is.na(AdvancedClasses), 0, AdvancedClasses))  # Replace NA with 0 for students with no advanced classes
+
+```
+
+```{r}
+## Major Change FLag
+# Step 1: Find first and most recent term and corresponding majors
+major_changes <- majors %>%
+  group_by(Student.ID) %>%
+  summarise(
+    FirstMajor = Major.1[which.min(Term.Code)],  # Major in the earliest term
+    MostRecentMajor = Major.1[which.max(Term.Code)],  # Major in the latest term
+    .groups = "drop"  # Drop grouping after summarising
+  ) %>%
+  mutate(ChangedMajor = ifelse(FirstMajor != MostRecentMajor, 1, 0))  # Check if the major changed
+
+# Step 2: Ensure Student.ID types are consistent
+major_changes <- major_changes %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+# Step 3: Merge ChangedMajor dummy into the main table
+data_combined <- data_combined %>%
+  left_join(major_changes %>% select(Student.ID, ChangedMajor), by = "Student.ID") %>%
+  mutate(ChangedMajor = ifelse(is.na(ChangedMajor), 0, ChangedMajor))  # Replace NA with 0 for students with no changes
+
+```
+```{r}
+## Term Count
+# Step 1: Filter Term.Code ending in 10 or 20 (spring and fall terms)
+primary_terms <- majors %>%
+  filter(grepl("(10|20)$", Term.Code))  # Keep only terms ending in 10 or 20
+
+# Step 2: Count distinct primary terms for each student
+primary_term_count <- primary_terms %>%
+  group_by(Student.ID) %>%
+  summarise(PrimaryTermCount = n_distinct(Term.Code), .groups = "drop")
+
+# Step 3: Ensure Student.ID types are consistent
+primary_term_count <- primary_term_count %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+# Step 4: Merge PrimaryTermCount into the main table
+data_combined <- data_combined %>%
+  left_join(primary_term_count, by = "Student.ID") %>%
+  mutate(PrimaryTermCount = ifelse(is.na(PrimaryTermCount), 0, PrimaryTermCount))  # Replace NA with 0
+
+```
+
+```{r}
+##Double Major Dummy
+# Step 1: Filter for Max Term.Code for each student
+two_majors <- majors %>%
+  group_by(Student.ID) %>%
+  filter(Term.Code == max(Term.Code, na.rm = TRUE)) %>%  # Get max Term.Code
+  select(Student.ID, Major.2) %>%  # Keep relevant columns
+  distinct(Student.ID, .keep_all = TRUE)  # Ensure one record per student in case of ties
+
+# Step 2: Create a dummy variable for students with a second major
+two_majors <- two_majors %>%
+  mutate(
+    Student.ID = as.character(Student.ID),  # Ensure consistent ID type
+    TwoMajors = ifelse(!is.na(Major.2), 1, 0)  # 1 if Major.2 is not NA, 0 otherwise
+  ) %>%
+  select(Student.ID, TwoMajors)  # Keep only relevant columns
+
+# Step 3: Ensure Student.ID types are consistent in the main dataset
+data_combined <- data_combined %>%
+  mutate(Student.ID = as.character(Student.ID))
+
+# Step 4: Merge the dummy variable into the main dataset
+data_combined <- data_combined %>%
+  left_join(two_majors, by = "Student.ID") %>%
+  mutate(TwoMajors = ifelse(is.na(TwoMajors), 0, TwoMajors))  # Replace NA with 0
+
+```
+
+
+
+```{r}
+# Save the combined data to a new CSV file
+#UNCOMMENT AND DELETE PREVIOUS FILE TO RUN
+output_file <- "Student_Table.csv"
+write.csv(data_combined, file = output_file, row.names = FALSE)
+```
+
